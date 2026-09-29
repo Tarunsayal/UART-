@@ -1,0 +1,882 @@
+VERSION 5.8 ;
+DIVIDERCHAR "/" ;
+BUSBITCHARS "[]" ;
+DESIGN uart_top ;
+UNITS DISTANCE MICRONS 2000 ;
+DIEAREA ( 0 0 ) ( 98610 98610 ) ;
+ROW ROW_0 FreePDK45_38x28_10R_NP_162NW_34O 20140 22400 N DO 153 BY 1 STEP 380 0 ;
+ROW ROW_1 FreePDK45_38x28_10R_NP_162NW_34O 20140 25200 FS DO 153 BY 1 STEP 380 0 ;
+ROW ROW_2 FreePDK45_38x28_10R_NP_162NW_34O 20140 28000 N DO 153 BY 1 STEP 380 0 ;
+ROW ROW_3 FreePDK45_38x28_10R_NP_162NW_34O 20140 30800 FS DO 153 BY 1 STEP 380 0 ;
+ROW ROW_4 FreePDK45_38x28_10R_NP_162NW_34O 20140 33600 N DO 153 BY 1 STEP 380 0 ;
+ROW ROW_5 FreePDK45_38x28_10R_NP_162NW_34O 20140 36400 FS DO 153 BY 1 STEP 380 0 ;
+ROW ROW_6 FreePDK45_38x28_10R_NP_162NW_34O 20140 39200 N DO 153 BY 1 STEP 380 0 ;
+ROW ROW_7 FreePDK45_38x28_10R_NP_162NW_34O 20140 42000 FS DO 153 BY 1 STEP 380 0 ;
+ROW ROW_8 FreePDK45_38x28_10R_NP_162NW_34O 20140 44800 N DO 153 BY 1 STEP 380 0 ;
+ROW ROW_9 FreePDK45_38x28_10R_NP_162NW_34O 20140 47600 FS DO 153 BY 1 STEP 380 0 ;
+ROW ROW_10 FreePDK45_38x28_10R_NP_162NW_34O 20140 50400 N DO 153 BY 1 STEP 380 0 ;
+ROW ROW_11 FreePDK45_38x28_10R_NP_162NW_34O 20140 53200 FS DO 153 BY 1 STEP 380 0 ;
+ROW ROW_12 FreePDK45_38x28_10R_NP_162NW_34O 20140 56000 N DO 153 BY 1 STEP 380 0 ;
+ROW ROW_13 FreePDK45_38x28_10R_NP_162NW_34O 20140 58800 FS DO 153 BY 1 STEP 380 0 ;
+ROW ROW_14 FreePDK45_38x28_10R_NP_162NW_34O 20140 61600 N DO 153 BY 1 STEP 380 0 ;
+ROW ROW_15 FreePDK45_38x28_10R_NP_162NW_34O 20140 64400 FS DO 153 BY 1 STEP 380 0 ;
+ROW ROW_16 FreePDK45_38x28_10R_NP_162NW_34O 20140 67200 N DO 153 BY 1 STEP 380 0 ;
+ROW ROW_17 FreePDK45_38x28_10R_NP_162NW_34O 20140 70000 FS DO 153 BY 1 STEP 380 0 ;
+ROW ROW_18 FreePDK45_38x28_10R_NP_162NW_34O 20140 72800 N DO 153 BY 1 STEP 380 0 ;
+ROW ROW_19 FreePDK45_38x28_10R_NP_162NW_34O 20140 75600 FS DO 153 BY 1 STEP 380 0 ;
+TRACKS X 140 DO 352 STEP 280 LAYER metal1 ;
+TRACKS Y 140 DO 352 STEP 280 LAYER metal1 ;
+TRACKS X 140 DO 352 STEP 280 LAYER metal2 ;
+TRACKS Y 140 DO 352 STEP 280 LAYER metal2 ;
+TRACKS X 140 DO 352 STEP 280 LAYER metal3 ;
+TRACKS Y 140 DO 352 STEP 280 LAYER metal3 ;
+NONDEFAULTRULES 1 ;
+    - CTS_NDR_0
+      + LAYER metal1 WIDTH 140 SPACING 280
+      + LAYER metal2 WIDTH 140 SPACING 480
+      + LAYER metal3 WIDTH 140 SPACING 280
+      + LAYER metal4 WIDTH 280 SPACING 560
+      + LAYER metal5 WIDTH 280 SPACING 560
+      + LAYER metal6 WIDTH 280 SPACING 560
+      + LAYER metal7 WIDTH 800 SPACING 1600
+      + LAYER metal8 WIDTH 800 SPACING 1600
+      + LAYER metal9 WIDTH 1600 SPACING 3200
+      + LAYER metal10 WIDTH 1600 SPACING 3200
+    ;
+END NONDEFAULTRULES
+COMPONENTS 313 ;
+    - _294_ INV_X1 + PLACED ( 25080 70000 ) FS ;
+    - _295_ INV_X1 + PLACED ( 36860 47600 ) FS ;
+    - _296_ INV_X1 + PLACED ( 62320 70000 ) FS ;
+    - _297_ INV_X1 + PLACED ( 59280 75600 ) FS ;
+    - _298_ INV_X1 + PLACED ( 75240 72800 ) N ;
+    - _299_ INV_X1 + PLACED ( 60800 50400 ) N ;
+    - _300_ INV_X1 + PLACED ( 65360 61600 ) N ;
+    - _301_ INV_X1 + PLACED ( 27740 50400 ) N ;
+    - _302_ INV_X1 + PLACED ( 61940 56000 ) N ;
+    - _303_ INV_X1 + PLACED ( 49780 44800 ) N ;
+    - _304_ INV_X1 + PLACED ( 25840 30800 ) FS ;
+    - _305_ INV_X1 + PLACED ( 53200 39200 ) N ;
+    - _306_ INV_X1 + PLACED ( 66880 56000 ) N ;
+    - _307_ INV_X1 + PLACED ( 36100 56000 ) N ;
+    - _308_ INV_X1 + PLACED ( 33060 44800 ) N ;
+    - _309_ NAND2_X1 + PLACED ( 27740 61600 ) N ;
+    - _310_ XOR2_X1 + PLACED ( 26980 70000 ) FS ;
+    - _311_ XNOR2_X1 + PLACED ( 28120 67200 ) N ;
+    - _312_ NAND2_X1 + PLACED ( 34960 72800 ) N ;
+    - _313_ NOR4_X1 + PLACED ( 30400 36400 ) FS ;
+    - _314_ OR3_X1 + PLACED ( 29260 44800 ) N ;
+    - _315_ NOR3_X1 + PLACED ( 31160 44800 ) N ;
+    - _316_ AND2_X1 + PLACED ( 31920 56000 ) N ;
+    - _317_ NAND2_X1 + PLACED ( 32300 61600 ) N ;
+    - _318_ NAND3_X1 + PLACED ( 28880 64400 ) FS ;
+    - _319_ XNOR2_X1 + PLACED ( 28500 58800 ) FS ;
+    - _320_ OR2_X1 + PLACED ( 30400 67200 ) N ;
+    - _321_ NOR2_X1 + PLACED ( 36480 72800 ) N ;
+    - _322_ AND2_X1 + PLACED ( 31160 64400 ) FS ;
+    - _323_ MUX2_X1 + PLACED ( 37620 70000 ) FS ;
+    - _324_ NOR3_X1 + PLACED ( 30400 72800 ) N ;
+    - _325_ MUX2_X1 + PLACED ( 29640 75600 ) FS ;
+    - _326_ NAND2_X1 + PLACED ( 42940 50400 ) N ;
+    - _327_ AND3_X1 + PLACED ( 41800 47600 ) FS ;
+    - _328_ INV_X1 + PLACED ( 26220 53200 ) FS ;
+    - _329_ OAI21_X1 + PLACED ( 24700 64400 ) FS ;
+    - _330_ AOI21_X1 + PLACED ( 23560 70000 ) FS ;
+    - _331_ AND3_X1 + PLACED ( 24320 53200 ) FS ;
+    - _332_ AOI21_X1 + PLACED ( 24700 56000 ) N ;
+    - _333_ NOR3_X1 + PLACED ( 23180 56000 ) N ;
+    - _334_ OR2_X1 + PLACED ( 34580 44800 ) N ;
+    - _335_ NAND2_X1 + PLACED ( 26980 53200 ) FS ;
+    - _336_ NAND3_X1 + PLACED ( 27740 47600 ) FS ;
+    - _337_ AND2_X1 + PLACED ( 38380 56000 ) N ;
+    - _338_ OAI21_X1 + PLACED ( 34580 56000 ) N ;
+    - _339_ AND3_X1 + PLACED ( 29640 50400 ) N ;
+    - _340_ INV_X1 + PLACED ( 30780 42000 ) FS ;
+    - _341_ NAND3_X1 + PLACED ( 36100 44800 ) N ;
+    - _342_ OAI21_X1 + PLACED ( 36860 39200 ) N ;
+    - _343_ AOI21_X1 + PLACED ( 34580 36400 ) FS ;
+    - _344_ AND3_X1 + PLACED ( 34960 39200 ) N ;
+    - _345_ NOR3_X1 + PLACED ( 29260 42000 ) FS ;
+    - _346_ OR2_X1 + PLACED ( 23560 36400 ) FS ;
+    - _347_ NAND2_X1 + PLACED ( 24320 47600 ) FS ;
+    - _348_ AND3_X1 + PLACED ( 22800 39200 ) N ;
+    - _349_ NOR3_X1 + PLACED ( 72580 50400 ) N ;
+    - _350_ NAND3_X1 + PLACED ( 61560 50400 ) N ;
+    - _351_ NOR2_X1 + PLACED ( 64220 61600 ) N ;
+    - _352_ AND3_X1 + PLACED ( 65740 64400 ) FS ;
+    - _353_ NAND2_X1 + PLACED ( 58900 56000 ) N ;
+    - _354_ NOR2_X1 + PLACED ( 63460 53200 ) FS ;
+    - _355_ NAND3_X1 + PLACED ( 58140 53200 ) FS ;
+    - _356_ AOI21_X1 + PLACED ( 66120 67200 ) N ;
+    - _357_ NOR3_X1 + PLACED ( 66880 61600 ) N ;
+    - _358_ MUX2_X1 + PLACED ( 68020 64400 ) FS ;
+    - _359_ AND2_X1 + PLACED ( 71820 72800 ) N ;
+    - _360_ NOR3_X1 + PLACED ( 32680 64400 ) FS ;
+    - _361_ MUX2_X1 + PLACED ( 39520 64400 ) FS ;
+    - _362_ OAI21_X1 + PLACED ( 61560 47600 ) FS ;
+    - _363_ AOI21_X1 + PLACED ( 60040 47600 ) FS ;
+    - _364_ NAND2_X1 + PLACED ( 30780 61600 ) N ;
+    - _365_ NOR2_X1 + PLACED ( 36100 70000 ) FS ;
+    - _366_ MUX2_X1 + PLACED ( 38760 72800 ) N ;
+    - _367_ AND3_X1 + PLACED ( 64600 44800 ) N ;
+    - _368_ AOI21_X1 + PLACED ( 63840 47600 ) FS ;
+    - _369_ NOR3_X1 + PLACED ( 65360 47600 ) FS ;
+    - _370_ MUX2_X1 + PLACED ( 53960 72800 ) N ;
+    - _371_ MUX2_X1 + PLACED ( 51300 72800 ) N ;
+    - _372_ MUX2_X1 + PLACED ( 70300 70000 ) FS ;
+    - _373_ OAI21_X1 + PLACED ( 22800 47600 ) FS ;
+    - _374_ AOI21_X1 + PLACED ( 22420 53200 ) FS ;
+    - _375_ OAI21_X1 + PLACED ( 23180 64400 ) FS ;
+    - _376_ AOI21_X1 + PLACED ( 21660 64400 ) FS ;
+    - _377_ MUX2_X1 + PLACED ( 47500 53200 ) FS ;
+    - _378_ AND3_X1 + PLACED ( 26600 33600 ) N ;
+    - _379_ AND4_X1 + PLACED ( 28880 33600 ) N ;
+    - _380_ AND2_X1 + PLACED ( 30780 25200 ) FS ;
+    - _381_ AND4_X1 + PLACED ( 30780 30800 ) FS ;
+    - _382_ AND2_X1 + PLACED ( 41040 33600 ) N ;
+    - _383_ AND2_X1 + PLACED ( 43700 30800 ) FS ;
+    - _384_ AND4_X1 + PLACED ( 43320 33600 ) N ;
+    - _385_ AND2_X1 + PLACED ( 45980 30800 ) FS ;
+    - _386_ AND2_X1 + PLACED ( 41040 28000 ) N ;
+    - _387_ NAND3_X1 + PLACED ( 45220 28000 ) N ;
+    - _388_ NOR2_X1 + PLACED ( 41420 25200 ) FS ;
+    - _389_ NOR3_X1 + PLACED ( 50920 25200 ) FS ;
+    - _390_ NOR4_X1 + PLACED ( 28880 28000 ) N ;
+    - _391_ NOR3_X1 + PLACED ( 38000 28000 ) N ;
+    - _392_ NAND3_X1 + PLACED ( 39520 28000 ) N ;
+    - _393_ NOR4_X1 + PLACED ( 40660 30800 ) FS ;
+    - _394_ OR2_X1 + PLACED ( 42180 39200 ) N ;
+    - _395_ NOR3_X1 + PLACED ( 39900 25200 ) FS ;
+    - _396_ NOR2_X1 + PLACED ( 45600 25200 ) FS ;
+    - _397_ NOR3_X1 + PLACED ( 46740 25200 ) FS ;
+    - _398_ NOR2_X1 + PLACED ( 45600 33600 ) N ;
+    - _399_ NOR3_X1 + PLACED ( 46740 33600 ) N ;
+    - _400_ NOR2_X1 + PLACED ( 43320 36400 ) FS ;
+    - _401_ NOR3_X1 + PLACED ( 44460 36400 ) FS ;
+    - _402_ NOR2_X1 + PLACED ( 39140 33600 ) N ;
+    - _403_ NOR3_X1 + PLACED ( 38760 39200 ) N ;
+    - _404_ AOI21_X1 + PLACED ( 31540 28000 ) N ;
+    - _405_ NOR3_X1 + PLACED ( 33440 28000 ) N ;
+    - _406_ XNOR2_X1 + PLACED ( 28500 25200 ) FS ;
+    - _407_ NOR2_X1 + PLACED ( 26600 25200 ) FS ;
+    - _408_ NOR2_X1 + PLACED ( 31540 22400 ) N ;
+    - _409_ NOR3_X1 + PLACED ( 32300 25200 ) FS ;
+    - _410_ NOR2_X1 + PLACED ( 29640 30800 ) FS ;
+    - _411_ NOR3_X1 + PLACED ( 32300 36400 ) FS ;
+    - _412_ AOI21_X1 + PLACED ( 25080 36400 ) FS ;
+    - _413_ NOR3_X1 + PLACED ( 25460 39200 ) N ;
+    - _414_ XNOR2_X1 + PLACED ( 23560 30800 ) FS ;
+    - _415_ NOR2_X1 + PLACED ( 22420 30800 ) FS ;
+    - _416_ NOR2_X1 + PLACED ( 22420 22400 ) N ;
+    - _417_ NOR3_X1 + PLACED ( 28880 61600 ) N ;
+    - _418_ NAND2_X1 + PLACED ( 30780 56000 ) N ;
+    - _419_ NAND2_X1 + PLACED ( 32300 58800 ) FS ;
+    - _420_ OAI21_X1 + PLACED ( 36480 64400 ) FS ;
+    - _421_ NAND3_X1 + PLACED ( 33440 67200 ) N ;
+    - _422_ OAI21_X1 + PLACED ( 34960 64400 ) FS ;
+    - _423_ XNOR2_X1 + PLACED ( 64600 58800 ) FS ;
+    - _424_ NOR2_X1 + PLACED ( 66880 53200 ) FS ;
+    - _425_ AND2_X1 + PLACED ( 73720 47600 ) FS ;
+    - _426_ XNOR2_X1 + PLACED ( 74100 44800 ) N ;
+    - _427_ NOR2_X1 + PLACED ( 66880 47600 ) FS ;
+    - _428_ MUX2_X1 + PLACED ( 48640 70000 ) FS ;
+    - _429_ AND3_X1 + PLACED ( 57380 39200 ) N ;
+    - _430_ AND4_X1 + PLACED ( 56620 36400 ) FS ;
+    - _431_ AND2_X1 + PLACED ( 56620 30800 ) FS ;
+    - _432_ AND4_X1 + PLACED ( 59280 30800 ) FS ;
+    - _433_ AND2_X1 + PLACED ( 68400 25200 ) FS ;
+    - _434_ AND2_X1 + PLACED ( 70680 25200 ) FS ;
+    - _435_ AND4_X1 + PLACED ( 69160 28000 ) N ;
+    - _436_ AND2_X1 + PLACED ( 72960 36400 ) FS ;
+    - _437_ AND2_X1 + PLACED ( 73720 30800 ) FS ;
+    - _438_ NAND3_X1 + PLACED ( 69540 36400 ) FS ;
+    - _439_ NOR2_X1 + PLACED ( 74480 36400 ) FS ;
+    - _440_ NOR3_X1 + PLACED ( 68020 33600 ) N ;
+    - _441_ NOR4_X1 + PLACED ( 58140 33600 ) N ;
+    - _442_ NOR3_X1 + PLACED ( 64980 33600 ) N ;
+    - _443_ NAND3_X1 + PLACED ( 66500 33600 ) N ;
+    - _444_ NOR4_X1 + PLACED ( 67260 36400 ) FS ;
+    - _445_ OR2_X1 + PLACED ( 51300 39200 ) N ;
+    - _446_ NOR3_X1 + PLACED ( 73720 28000 ) N ;
+    - _447_ NOR2_X1 + PLACED ( 72580 28000 ) N ;
+    - _448_ NOR3_X1 + PLACED ( 71440 36400 ) FS ;
+    - _449_ NOR2_X1 + PLACED ( 71440 28000 ) N ;
+    - _450_ NOR3_X1 + PLACED ( 71440 30800 ) FS ;
+    - _451_ NOR2_X1 + PLACED ( 70680 22400 ) N ;
+    - _452_ NOR3_X1 + PLACED ( 72200 25200 ) FS ;
+    - _453_ NOR2_X1 + PLACED ( 67260 25200 ) FS ;
+    - _454_ NOR3_X1 + PLACED ( 67260 28000 ) N ;
+    - _455_ AOI21_X1 + PLACED ( 60420 25200 ) FS ;
+    - _456_ NOR3_X1 + PLACED ( 58900 25200 ) FS ;
+    - _457_ XNOR2_X1 + PLACED ( 55860 25200 ) FS ;
+    - _458_ NOR2_X1 + PLACED ( 53960 25200 ) FS ;
+    - _459_ NOR2_X1 + PLACED ( 58140 30800 ) FS ;
+    - _460_ NOR3_X1 + PLACED ( 58900 28000 ) N ;
+    - _461_ NOR2_X1 + PLACED ( 58900 36400 ) FS ;
+    - _462_ NOR3_X1 + PLACED ( 59660 39200 ) N ;
+    - _463_ AOI21_X1 + PLACED ( 55860 39200 ) N ;
+    - _464_ NOR3_X1 + PLACED ( 57380 50400 ) N ;
+    - _465_ XNOR2_X1 + PLACED ( 54340 36400 ) FS ;
+    - _466_ NOR2_X1 + PLACED ( 53200 36400 ) FS ;
+    - _467_ NOR2_X1 + PLACED ( 51300 44800 ) N ;
+    - _468_ NOR2_X1 + PLACED ( 60420 56000 ) N ;
+    - _469_ OR2_X1 + PLACED ( 61940 53200 ) FS ;
+    - _470_ NOR2_X1 + PLACED ( 60800 53200 ) FS ;
+    - _471_ OAI22_X1 + PLACED ( 63460 56000 ) N ;
+    - _472_ AOI22_X1 + PLACED ( 61560 58800 ) FS ;
+    - _473_ INV_X1 + PLACED ( 55100 58800 ) FS ;
+    - _474_ AOI21_X1 + PLACED ( 25460 47600 ) FS ;
+    - _475_ INV_X1 + PLACED ( 22040 47600 ) FS ;
+    - _476_ NAND2_X1 + PLACED ( 31540 53200 ) FS ;
+    - _477_ OAI21_X1 + PLACED ( 30020 53200 ) FS ;
+    - _478_ AOI21_X1 + PLACED ( 44080 50400 ) N ;
+    - _479_ OAI21_X1 + PLACED ( 43700 47600 ) FS ;
+    - _480_ XOR2_X1 + PLACED ( 66880 39200 ) N ;
+    - _481_ NOR2_X1 + PLACED ( 64980 39200 ) N ;
+    - _482_ AND2_X1 + PLACED ( 52440 44800 ) N ;
+    - _483_ OAI21_X1 + PLACED ( 71060 47600 ) FS ;
+    - _484_ NOR2_X1 + PLACED ( 72580 47600 ) FS ;
+    - _485_ NOR2_X1 + PLACED ( 59660 70000 ) FS ;
+    - _486_ OAI21_X1 + PLACED ( 61180 61600 ) N ;
+    - _487_ AOI21_X1 + PLACED ( 60800 70000 ) FS ;
+    - _488_ OAI21_X1 + PLACED ( 59280 67200 ) N ;
+    - _489_ AOI21_X1 + PLACED ( 74100 70000 ) FS ;
+    - _490_ OAI21_X1 + PLACED ( 73340 72800 ) N ;
+    - _491_ NOR2_X1 + PLACED ( 63080 70000 ) FS ;
+    - _492_ OAI21_X1 + PLACED ( 66500 70000 ) FS ;
+    - _493_ OAI21_X1 + PLACED ( 64980 70000 ) FS ;
+    - _494_ OAI211_X1 + PLACED ( 60800 67200 ) N ;
+    - _495_ OAI211_X1 + PLACED ( 61940 64400 ) FS ;
+    - _496_ OAI21_X1 + PLACED ( 59280 64400 ) FS ;
+    - _497_ NOR3_X1 + PLACED ( 29260 70000 ) FS ;
+    - _498_ MUX2_X1 + PLACED ( 27740 72800 ) N ;
+    - _499_ NOR4_X1 + PLACED ( 73720 56000 ) N ;
+    - _500_ OR4_X1 + PLACED ( 74480 58800 ) FS ;
+    - _501_ AOI22_X1 + PLACED ( 59660 58800 ) FS ;
+    - _502_ INV_X1 + PLACED ( 52820 58800 ) FS ;
+    - _503_ NOR3_X1 + PLACED ( 31540 70000 ) FS ;
+    - _504_ MUX2_X1 + PLACED ( 32300 72800 ) N ;
+    - _505_ NOR3_X1 + PLACED ( 34200 70000 ) FS ;
+    - _506_ MUX2_X1 + PLACED ( 44080 67200 ) N ;
+    - _507_ OAI21_X1 + PLACED ( 35720 58800 ) FS ;
+    - _508_ AOI22_X1 + PLACED ( 71440 56000 ) N ;
+    - _509_ INV_X1 + PLACED ( 70680 56000 ) N ;
+    - _510_ NOR4_X1 + PLACED ( 59280 61600 ) N ;
+    - _511_ AND2_X1 + PLACED ( 41420 56000 ) N ;
+    - _512_ NOR2_X1 + PLACED ( 44460 53200 ) FS ;
+    - _513_ AOI21_X1 + PLACED ( 42940 53200 ) FS ;
+    - _514_ MUX2_X1 + PLACED ( 68020 75600 ) FS ;
+    - _515_ MUX2_X1 + PLACED ( 63080 75600 ) FS ;
+    - _516_ XOR2_X1 + PLACED ( 46740 28000 ) N ;
+    - _517_ NOR2_X1 + PLACED ( 48260 25200 ) FS ;
+    - _518_ AND2_X1 + PLACED ( 42940 42000 ) FS ;
+    - _519_ MUX2_X1 + PLACED ( 47880 67200 ) N ;
+    - _520_ DFF_X1 + PLACED ( 49020 42000 ) FS ;
+    - _521_ DFF_X1 + PLACED ( 51680 33600 ) N ;
+    - _522_ DFF_X1 + PLACED ( 55860 42000 ) FS ;
+    - _523_ DFF_X1 + PLACED ( 60040 36400 ) FS ;
+    - _524_ DFF_X1 + PLACED ( 60420 28000 ) N ;
+    - _525_ DFF_X1 + PLACED ( 51300 28000 ) N ;
+    - _526_ DFF_X1 + PLACED ( 57760 22400 ) N ;
+    - _527_ DFF_X1 + PLACED ( 64220 22400 ) N ;
+    - _528_ DFF_X1 + PLACED ( 71820 22400 ) N ;
+    - _529_ DFF_X1 + PLACED ( 64600 30800 ) FS ;
+    - _530_ DFF_X1 + PLACED ( 71820 39200 ) N ;
+    - _531_ DFF_X1 + PLACED ( 71820 33600 ) N ;
+    - _532_ DFF_X1 + PLACED ( 62320 42000 ) FS ;
+    - _533_ DFF_X1 + PLACED ( 52820 47600 ) FS ;
+    - _534_ DFFR_X1 + PLACED ( 69540 67200 ) N ;
+    - _535_ DFFR_X1 + PLACED ( 64220 72800 ) N ;
+    - _536_ DFFR_X1 + PLACED ( 50540 67200 ) N ;
+    - _537_ DFFR_X1 + PLACED ( 48640 61600 ) N ;
+    - _538_ DFFR_X1 + PLACED ( 70680 75600 ) FS ;
+    - _539_ DFFR_X1 + PLACED ( 56620 72800 ) N ;
+    - _540_ DFFR_X1 + PLACED ( 50540 75600 ) FS ;
+    - _541_ DFFR_X1 + PLACED ( 51300 70000 ) FS ;
+    - _542_ DFFR_X1 + PLACED ( 55480 44800 ) N ;
+    - _543_ DFFR_X1 + PLACED ( 64980 50400 ) N ;
+    - _544_ DFFR_X1 + PLACED ( 70680 42000 ) FS ;
+    - _545_ DFFR_X1 + PLACED ( 66500 44800 ) N ;
+    - _546_ DFFR_X1 + PLACED ( 70680 64400 ) FS ;
+    - _547_ DFFR_X1 + PLACED ( 68780 61600 ) N ;
+    - _548_ DFFR_X1 + PLACED ( 66880 58800 ) FS ;
+    - _549_ DFFR_X1 + PLACED ( 42180 64400 ) FS ;
+    - _550_ DFFR_X1 + PLACED ( 41040 75600 ) FS ;
+    - _551_ DFFR_X1 + PLACED ( 33440 75600 ) FS ;
+    - _552_ DFFR_X1 + PLACED ( 20140 72800 ) N ;
+    - _553_ DFFR_X1 + PLACED ( 43700 72800 ) N ;
+    - _554_ DFFR_X1 + PLACED ( 40280 70000 ) FS ;
+    - _555_ DFFR_X1 + PLACED ( 21280 75600 ) FS ;
+    - _556_ DFFR_X1 + PLACED ( 36480 67200 ) N ;
+    - _557_ DFF_X1 + PLACED ( 20140 25200 ) FS ;
+    - _558_ DFF_X1 + PLACED ( 21660 28000 ) N ;
+    - _559_ DFF_X1 + PLACED ( 20140 33600 ) N ;
+    - _560_ DFF_X1 + PLACED ( 31160 33600 ) N ;
+    - _561_ DFF_X1 + PLACED ( 32680 22400 ) N ;
+    - _562_ DFF_X1 + PLACED ( 23560 22400 ) N ;
+    - _563_ DFF_X1 + PLACED ( 33060 30800 ) FS ;
+    - _564_ DFF_X1 + PLACED ( 36100 36400 ) FS ;
+    - _565_ DFF_X1 + PLACED ( 43700 39200 ) N ;
+    - _566_ DFF_X1 + PLACED ( 46740 36400 ) FS ;
+    - _567_ DFF_X1 + PLACED ( 46740 22400 ) N ;
+    - _568_ DFF_X1 + PLACED ( 39140 22400 ) N ;
+    - _569_ DFF_X1 + PLACED ( 47500 30800 ) FS ;
+    - _570_ DFF_X1 + PLACED ( 42940 44800 ) N ;
+    - _571_ DFFR_X1 + PLACED ( 20140 67200 ) N ;
+    - _572_ DFFR_X1 + PLACED ( 20140 58800 ) FS ;
+    - _573_ DFFR_X1 + PLACED ( 20140 61600 ) N ;
+    - _574_ DFFR_X1 + PLACED ( 35340 42000 ) FS ;
+    - _575_ DFFR_X1 + PLACED ( 26980 39200 ) N ;
+    - _576_ DFFR_X1 + PLACED ( 20140 42000 ) FS ;
+    - _577_ DFFR_X1 + PLACED ( 21280 44800 ) N ;
+    - _578_ DFFS_X1 + PLACED ( 50160 53200 ) FS ;
+    - _579_ DFFR_X1 + PLACED ( 50920 56000 ) N ;
+    - _580_ DFFR_X1 + PLACED ( 51680 64400 ) FS ;
+    - _581_ DFFR_X1 + PLACED ( 70680 53200 ) FS ;
+    - _582_ DFFS_X1 + PLACED ( 45220 47600 ) FS ;
+    - _583_ DFFR_X1 + PLACED ( 29260 47600 ) FS ;
+    - _584_ DFFR_X1 + PLACED ( 20140 50400 ) N ;
+    - _585_ DFFR_X1 + PLACED ( 34960 53200 ) FS ;
+    - _586_ DFFS_X1 + PLACED ( 37240 61600 ) N ;
+    - _587_ DFFR_X1 + PLACED ( 41800 58800 ) FS ;
+    - _588_ DFFR_X1 + PLACED ( 42940 56000 ) N ;
+    - _589_ DFFS_X1 + PLACED ( 35340 50400 ) N ;
+    - _590_ DFFS_X1 + PLACED ( 48640 50400 ) N ;
+    - clkbuf_0_clk BUF_X4 + SOURCE TIMING + PLACED ( 47842 50525 ) N ;
+    - clkbuf_3_0__f_clk BUF_X4 + SOURCE TIMING + PLACED ( 21866 35850 ) N ;
+    - clkbuf_3_1__f_clk BUF_X4 + SOURCE TIMING + PLACED ( 41808 34193 ) N ;
+    - clkbuf_3_2__f_clk BUF_X4 + SOURCE TIMING + PLACED ( 22666 67349 ) N ;
+    - clkbuf_3_3__f_clk BUF_X4 + SOURCE TIMING + PLACED ( 46741 64787 ) N ;
+    - clkbuf_3_4__f_clk BUF_X4 + SOURCE TIMING + PLACED ( 50404 34120 ) N ;
+    - clkbuf_3_5__f_clk BUF_X4 + SOURCE TIMING + PLACED ( 74095 34778 ) N ;
+    - clkbuf_3_6__f_clk BUF_X4 + SOURCE TIMING + PLACED ( 47214 60061 ) N ;
+    - clkbuf_3_7__f_clk BUF_X4 + SOURCE TIMING + PLACED ( 69141 66134 ) N ;
+    - clkload0 BUF_X2 + SOURCE TIMING + PLACED ( 21866 35850 ) N ;
+    - clkload1 BUF_X2 + SOURCE TIMING + PLACED ( 41808 34193 ) N ;
+    - clkload2 INV_X2 + SOURCE TIMING + PLACED ( 22666 67349 ) N ;
+    - clkload3 BUF_X1 + SOURCE TIMING + PLACED ( 50404 34120 ) N ;
+    - clkload4 BUF_X1 + SOURCE TIMING + PLACED ( 74095 34778 ) N ;
+    - clkload5 BUF_X1 + SOURCE TIMING + PLACED ( 47214 60061 ) N ;
+    - clkload6 BUF_X1 + SOURCE TIMING + PLACED ( 69141 66134 ) N ;
+END COMPONENTS
+PINS 26 ;
+    - busyTx + NET busyTx + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER metal2 ( -70 -70 ) ( 70 70 )
+        + PLACED ( 56140 98540 ) N ;
+    - clk + NET clk + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER metal2 ( -70 -70 ) ( 70 70 )
+        + PLACED ( 49420 98540 ) N ;
+    - dataValidRx + NET dataValidRx + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER metal2 ( -70 -70 ) ( 70 70 )
+        + PLACED ( 43820 98540 ) N ;
+    - doneTx + NET doneTx + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER metal2 ( -70 -70 ) ( 70 70 )
+        + PLACED ( 45500 98540 ) N ;
+    - errorRx + NET errorRx + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER metal2 ( -70 -70 ) ( 70 70 )
+        + PLACED ( 42700 98540 ) N ;
+    - errorTx + NET zero_ + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER metal2 ( -70 -70 ) ( 70 70 )
+        + PLACED ( 2380 70 ) N ;
+    - parallelDataRx[0] + NET parallelDataRx[0] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER metal2 ( -70 -70 ) ( 70 70 )
+        + PLACED ( 51100 98540 ) N ;
+    - parallelDataRx[1] + NET parallelDataRx[1] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER metal2 ( -70 -70 ) ( 70 70 )
+        + PLACED ( 51660 98540 ) N ;
+    - parallelDataRx[2] + NET parallelDataRx[2] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER metal2 ( -70 -70 ) ( 70 70 )
+        + PLACED ( 48300 98540 ) N ;
+    - parallelDataRx[3] + NET parallelDataRx[3] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER metal2 ( -70 -70 ) ( 70 70 )
+        + PLACED ( 44940 98540 ) N ;
+    - parallelDataRx[4] + NET parallelDataRx[4] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER metal2 ( -70 -70 ) ( 70 70 )
+        + PLACED ( 52780 98540 ) N ;
+    - parallelDataRx[5] + NET parallelDataRx[5] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER metal2 ( -70 -70 ) ( 70 70 )
+        + PLACED ( 49980 98540 ) N ;
+    - parallelDataRx[6] + NET parallelDataRx[6] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER metal2 ( -70 -70 ) ( 70 70 )
+        + PLACED ( 47740 98540 ) N ;
+    - parallelDataRx[7] + NET parallelDataRx[7] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER metal2 ( -70 -70 ) ( 70 70 )
+        + PLACED ( 50540 98540 ) N ;
+    - parallelDataTx[0] + NET parallelDataTx[0] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER metal2 ( -70 -70 ) ( 70 70 )
+        + PLACED ( 54460 98540 ) N ;
+    - parallelDataTx[1] + NET parallelDataTx[1] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER metal2 ( -70 -70 ) ( 70 70 )
+        + PLACED ( 52220 98540 ) N ;
+    - parallelDataTx[2] + NET parallelDataTx[2] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER metal2 ( -70 -70 ) ( 70 70 )
+        + PLACED ( 47180 98540 ) N ;
+    - parallelDataTx[3] + NET parallelDataTx[3] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER metal2 ( -70 -70 ) ( 70 70 )
+        + PLACED ( 44380 98540 ) N ;
+    - parallelDataTx[4] + NET parallelDataTx[4] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER metal2 ( -70 -70 ) ( 70 70 )
+        + PLACED ( 53340 98540 ) N ;
+    - parallelDataTx[5] + NET parallelDataTx[5] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER metal2 ( -70 -70 ) ( 70 70 )
+        + PLACED ( 53900 98540 ) N ;
+    - parallelDataTx[6] + NET parallelDataTx[6] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER metal2 ( -70 -70 ) ( 70 70 )
+        + PLACED ( 46620 98540 ) N ;
+    - parallelDataTx[7] + NET parallelDataTx[7] + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER metal2 ( -70 -70 ) ( 70 70 )
+        + PLACED ( 48860 98540 ) N ;
+    - reset + NET reset + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER metal2 ( -70 -70 ) ( 70 70 )
+        + PLACED ( 43260 98540 ) N ;
+    - serialDataRx + NET serialDataRx + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER metal2 ( -70 -70 ) ( 70 70 )
+        + PLACED ( 55020 98540 ) N ;
+    - serialDataTx + NET serialDataTx + DIRECTION OUTPUT + USE SIGNAL
+      + PORT
+        + LAYER metal2 ( -70 -70 ) ( 70 70 )
+        + PLACED ( 46060 98540 ) N ;
+    - startTx + NET startTx + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER metal2 ( -70 -70 ) ( 70 70 )
+        + PLACED ( 55580 98540 ) N ;
+END PINS
+NETS 390 ;
+    - _000_ ( _571_ QN ) ( _417_ A2 ) ( _329_ B2 ) ( _318_ A2 ) ( _311_ A ) ( _310_ A ) ( _309_ A1 ) + USE SIGNAL ;
+    - _001_ ( _572_ QN ) ( _417_ A3 ) ( _318_ A3 ) ( _311_ B ) ( _310_ B ) ( _309_ A2 ) + USE SIGNAL ;
+    - _002_ ( _573_ QN ) ( _417_ A1 ) ( _319_ A ) ( _318_ A1 ) + USE SIGNAL ;
+    - _003_ ( _546_ QN ) ( _500_ A1 ) ( _499_ A1 ) ( _358_ B ) + USE SIGNAL ;
+    - _004_ ( _542_ QN ) ( _299_ A ) + USE SIGNAL ;
+    - _005_ ( _520_ QN ) ( _305_ A ) + USE SIGNAL ;
+    - _006_ ( _557_ QN ) ( _304_ A ) + USE SIGNAL ;
+    - _007_ ( _574_ QN ) ( _341_ A1 ) ( _314_ A2 ) ( _313_ A2 ) + USE SIGNAL ;
+    - _008_ ( _577_ QN ) ( _314_ A1 ) + USE SIGNAL ;
+    - _009_ ( _586_ QN ) ( _479_ B2 ) ( _327_ A1 ) ( _326_ A1 ) + USE SIGNAL ;
+    - _010_ ( _548_ QN ) ( _500_ A3 ) ( _499_ A3 ) + USE SIGNAL ;
+    - _011_ ( _545_ QN ) ( _349_ A2 ) + USE SIGNAL ;
+    - _012_ ( _533_ QN ) ( _470_ A1 ) ( _469_ A1 ) ( _468_ A1 ) + USE SIGNAL ;
+    - _013_ ( _521_ QN ) ( _441_ A4 ) + USE SIGNAL ;
+    - _014_ ( _523_ QN ) ( _442_ A3 ) + USE SIGNAL ;
+    - _015_ ( _527_ QN ) ( _442_ A2 ) + USE SIGNAL ;
+    - _016_ ( _529_ QN ) ( _444_ A2 ) + USE SIGNAL ;
+    - _017_ ( _543_ QN ) ( _349_ A3 ) + USE SIGNAL ;
+    - _018_ ( _544_ QN ) ( _349_ A1 ) + USE SIGNAL ;
+    - _019_ ( _547_ QN ) ( _500_ A2 ) ( _499_ A2 ) + USE SIGNAL ;
+    - _020_ ( _558_ QN ) ( _390_ A4 ) + USE SIGNAL ;
+    - _021_ ( _560_ QN ) ( _391_ A3 ) + USE SIGNAL ;
+    - _022_ ( _564_ QN ) ( _393_ A2 ) + USE SIGNAL ;
+    - _023_ ( _566_ QN ) ( _389_ A3 ) + USE SIGNAL ;
+    - _024_ ( _575_ QN ) ( _314_ A3 ) ( _313_ A3 ) + USE SIGNAL ;
+    - _025_ ( _576_ QN ) ( _315_ A1 ) ( _313_ A1 ) + USE SIGNAL ;
+    - _026_ ( _582_ D ) ( _479_ ZN ) + USE SIGNAL ;
+    - _027_ ( _583_ D ) ( _477_ ZN ) + USE SIGNAL ;
+    - _028_ ( _584_ D ) ( _475_ ZN ) + USE SIGNAL ;
+    - _029_ ( _585_ D ) ( _507_ ZN ) + USE SIGNAL ;
+    - _030_ ( _578_ D ) ( _471_ ZN ) + USE SIGNAL ;
+    - _031_ ( _579_ D ) ( _502_ ZN ) + USE SIGNAL ;
+    - _032_ ( _580_ D ) ( _473_ ZN ) + USE SIGNAL ;
+    - _033_ ( _581_ D ) ( _509_ ZN ) + USE SIGNAL ;
+    - _034_ ( _590_ SN ) ( _589_ SN ) ( _588_ RN ) ( _587_ RN ) ( _586_ SN ) ( _585_ RN ) ( _584_ RN )
+      ( _583_ RN ) ( _582_ SN ) ( _581_ RN ) ( _580_ RN ) ( _579_ RN ) ( _578_ SN ) ( _577_ RN ) ( _576_ RN )
+      ( _575_ RN ) ( _574_ RN ) ( _573_ RN ) ( _572_ RN ) ( _571_ RN ) ( _556_ RN ) ( _555_ RN ) ( _554_ RN )
+      ( _553_ RN ) ( _552_ RN ) ( _551_ RN ) ( _550_ RN ) ( _549_ RN ) ( _548_ RN ) ( _547_ RN ) ( _546_ RN )
+      ( _545_ RN ) ( _544_ RN ) ( _543_ RN ) ( _542_ RN ) ( _541_ RN ) ( _540_ RN ) ( _539_ RN ) ( _538_ RN )
+      ( _537_ RN ) ( _536_ RN ) ( _535_ RN ) ( _534_ RN ) ( _518_ A1 ) ( _482_ A1 ) ( _303_ ZN ) + USE SIGNAL ;
+    - _035_ ( _576_ D ) ( _348_ ZN ) + USE SIGNAL ;
+    - _036_ ( _575_ D ) ( _345_ ZN ) + USE SIGNAL ;
+    - _037_ ( _574_ D ) ( _342_ ZN ) + USE SIGNAL ;
+    - _038_ ( _572_ D ) ( _333_ ZN ) + USE SIGNAL ;
+    - _039_ ( _571_ D ) ( _330_ ZN ) + USE SIGNAL ;
+    - _040_ ( _568_ D ) ( _395_ ZN ) + USE SIGNAL ;
+    - _041_ ( _567_ D ) ( _397_ ZN ) + USE SIGNAL ;
+    - _042_ ( _566_ D ) ( _399_ ZN ) + USE SIGNAL ;
+    - _043_ ( _565_ D ) ( _401_ ZN ) + USE SIGNAL ;
+    - _044_ ( _564_ D ) ( _403_ ZN ) + USE SIGNAL ;
+    - _045_ ( _563_ D ) ( _405_ ZN ) + USE SIGNAL ;
+    - _046_ ( _562_ D ) ( _407_ ZN ) + USE SIGNAL ;
+    - _047_ ( _561_ D ) ( _409_ ZN ) + USE SIGNAL ;
+    - _048_ ( _560_ D ) ( _411_ ZN ) + USE SIGNAL ;
+    - _049_ ( _559_ D ) ( _413_ ZN ) + USE SIGNAL ;
+    - _050_ ( _558_ D ) ( _415_ ZN ) + USE SIGNAL ;
+    - _051_ ( _557_ D ) ( _416_ ZN ) + USE SIGNAL ;
+    - _052_ ( _555_ D ) ( _325_ Z ) + USE SIGNAL ;
+    - _053_ ( _554_ D ) ( _323_ Z ) + USE SIGNAL ;
+    - _054_ ( _553_ D ) ( _506_ Z ) + USE SIGNAL ;
+    - _055_ ( _552_ D ) ( _498_ Z ) + USE SIGNAL ;
+    - _056_ ( _551_ D ) ( _504_ Z ) + USE SIGNAL ;
+    - _057_ ( _550_ D ) ( _366_ Z ) + USE SIGNAL ;
+    - _058_ ( _549_ D ) ( _361_ Z ) + USE SIGNAL ;
+    - _059_ ( _547_ D ) ( _357_ ZN ) + USE SIGNAL ;
+    - _060_ ( _546_ D ) ( _359_ ZN ) + USE SIGNAL ;
+    - _061_ ( _544_ D ) ( _484_ ZN ) + USE SIGNAL ;
+    - _062_ ( _543_ D ) ( _369_ ZN ) + USE SIGNAL ;
+    - _063_ ( _542_ D ) ( _363_ ZN ) + USE SIGNAL ;
+    - _064_ ( _540_ D ) ( _371_ Z ) + USE SIGNAL ;
+    - _065_ ( _539_ D ) ( _370_ Z ) + USE SIGNAL ;
+    - _066_ ( _538_ D ) ( _372_ Z ) + USE SIGNAL ;
+    - _067_ ( _537_ D ) ( _377_ Z ) + USE SIGNAL ;
+    - _068_ ( _536_ D ) ( _519_ Z ) + USE SIGNAL ;
+    - _069_ ( _535_ D ) ( _515_ Z ) + USE SIGNAL ;
+    - _070_ ( _534_ D ) ( _514_ Z ) + USE SIGNAL ;
+    - _071_ ( _531_ D ) ( _446_ ZN ) + USE SIGNAL ;
+    - _072_ ( _530_ D ) ( _448_ ZN ) + USE SIGNAL ;
+    - _073_ ( _529_ D ) ( _450_ ZN ) + USE SIGNAL ;
+    - _074_ ( _528_ D ) ( _452_ ZN ) + USE SIGNAL ;
+    - _075_ ( _527_ D ) ( _454_ ZN ) + USE SIGNAL ;
+    - _076_ ( _526_ D ) ( _456_ ZN ) + USE SIGNAL ;
+    - _077_ ( _525_ D ) ( _458_ ZN ) + USE SIGNAL ;
+    - _078_ ( _524_ D ) ( _460_ ZN ) + USE SIGNAL ;
+    - _079_ ( _523_ D ) ( _462_ ZN ) + USE SIGNAL ;
+    - _080_ ( _522_ D ) ( _464_ ZN ) + USE SIGNAL ;
+    - _081_ ( _521_ D ) ( _466_ ZN ) + USE SIGNAL ;
+    - _082_ ( _520_ D ) ( _467_ ZN ) + USE SIGNAL ;
+    - _083_ ( _532_ D ) ( _481_ ZN ) + USE SIGNAL ;
+    - _084_ ( _533_ D ) ( _482_ ZN ) + USE SIGNAL ;
+    - _085_ ( _541_ D ) ( _428_ Z ) + USE SIGNAL ;
+    - _086_ ( _545_ D ) ( _427_ ZN ) + USE SIGNAL ;
+    - _087_ ( _548_ D ) ( _424_ ZN ) + USE SIGNAL ;
+    - _088_ ( _556_ D ) ( _422_ ZN ) + USE SIGNAL ;
+    - _089_ ( _569_ D ) ( _517_ ZN ) + USE SIGNAL ;
+    - _090_ ( _570_ D ) ( _518_ ZN ) + USE SIGNAL ;
+    - _091_ ( _573_ D ) ( _376_ ZN ) + USE SIGNAL ;
+    - _092_ ( _577_ D ) ( _374_ ZN ) + USE SIGNAL ;
+    - _093_ ( _587_ D ) ( _511_ ZN ) + USE SIGNAL ;
+    - _094_ ( _588_ D ) ( _513_ ZN ) + USE SIGNAL ;
+    - _095_ ( _497_ A1 ) ( _420_ B2 ) ( _330_ B2 ) ( _294_ ZN ) + USE SIGNAL ;
+    - _096_ ( _342_ B2 ) ( _295_ ZN ) + USE SIGNAL ;
+    - _097_ ( _491_ A1 ) ( _485_ A1 ) ( _296_ ZN ) + USE SIGNAL ;
+    - _098_ ( _487_ B1 ) ( _297_ ZN ) + USE SIGNAL ;
+    - _099_ ( _489_ B1 ) ( _298_ ZN ) + USE SIGNAL ;
+    - _100_ ( _363_ B2 ) ( _350_ A1 ) ( _299_ ZN ) + USE SIGNAL ;
+    - _101_ ( _351_ A1 ) ( _300_ ZN ) + USE SIGNAL ;
+    - _102_ ( _374_ B2 ) ( _373_ B2 ) ( _336_ A1 ) ( _335_ A1 ) ( _301_ ZN ) + USE SIGNAL ;
+    - _103_ ( _471_ B2 ) ( _354_ A1 ) ( _302_ ZN ) + USE SIGNAL ;
+    - _104_ ( _416_ A1 ) ( _304_ ZN ) + USE SIGNAL ;
+    - _105_ ( _467_ A1 ) ( _305_ ZN ) + USE SIGNAL ;
+    - _106_ ( _471_ A1 ) ( _306_ ZN ) + USE SIGNAL ;
+    - _107_ ( _507_ B2 ) ( _307_ ZN ) + USE SIGNAL ;
+    - _108_ ( _315_ A2 ) ( _313_ A4 ) ( _308_ ZN ) + USE SIGNAL ;
+    - _109_ ( _319_ B ) ( _309_ ZN ) + USE SIGNAL ;
+    - _110_ ( _505_ A2 ) ( _497_ A2 ) ( _312_ A2 ) ( _310_ Z ) + USE SIGNAL ;
+    - _111_ ( _503_ A2 ) ( _421_ A2 ) ( _324_ A2 ) ( _311_ ZN ) + USE SIGNAL ;
+    - _112_ ( _365_ A1 ) ( _321_ A1 ) ( _312_ ZN ) + USE SIGNAL ;
+    - _113_ ( _336_ A3 ) ( _335_ A2 ) ( _313_ ZN ) + USE SIGNAL ;
+    - _114_ ( _315_ A3 ) ( _314_ ZN ) + USE SIGNAL ;
+    - _115_ ( _507_ B1 ) ( _418_ A1 ) ( _338_ A ) ( _337_ A2 ) ( _317_ A2 ) ( _316_ A2 ) ( _315_ ZN ) + USE SIGNAL ;
+    - _116_ ( _419_ A1 ) ( _364_ A1 ) ( _332_ B1 ) ( _331_ A3 ) ( _316_ ZN ) + USE SIGNAL ;
+    - _117_ ( _360_ A2 ) ( _330_ B1 ) ( _329_ B1 ) ( _320_ A1 ) ( _317_ ZN ) + USE SIGNAL ;
+    - _118_ ( _360_ A3 ) ( _322_ A2 ) ( _318_ ZN ) + USE SIGNAL ;
+    - _119_ ( _364_ A2 ) ( _320_ A2 ) ( _319_ ZN ) + USE SIGNAL ;
+    - _120_ ( _422_ B2 ) ( _324_ A3 ) ( _321_ A2 ) ( _320_ ZN ) + USE SIGNAL ;
+    - _121_ ( _323_ S ) ( _321_ ZN ) + USE SIGNAL ;
+    - _122_ ( _504_ B ) ( _421_ A3 ) ( _366_ B ) ( _325_ B ) ( _323_ B ) ( _322_ ZN ) + USE SIGNAL ;
+    - _123_ ( _325_ S ) ( _324_ ZN ) + USE SIGNAL ;
+    - _124_ ( _478_ B1 ) ( _326_ ZN ) + USE SIGNAL ;
+    - _125_ ( _474_ A ) ( _334_ A2 ) ( _333_ A1 ) ( _328_ A ) ( _327_ ZN ) + USE SIGNAL ;
+    - _126_ ( _375_ A ) ( _339_ A1 ) ( _329_ A ) ( _328_ ZN ) + USE SIGNAL ;
+    - _127_ ( _330_ A ) ( _329_ ZN ) + USE SIGNAL ;
+    - _128_ ( _376_ B1 ) ( _375_ B1 ) ( _333_ A2 ) ( _331_ ZN ) + USE SIGNAL ;
+    - _129_ ( _333_ A3 ) ( _332_ ZN ) + USE SIGNAL ;
+    - _130_ ( _344_ A3 ) ( _343_ B1 ) ( _342_ B1 ) ( _341_ A2 ) ( _334_ ZN ) + USE SIGNAL ;
+    - _131_ ( _474_ B1 ) ( _335_ ZN ) + USE SIGNAL ;
+    - _132_ ( _513_ B1 ) ( _479_ B1 ) ( _477_ B1 ) ( _339_ A2 ) ( _336_ ZN ) + USE SIGNAL ;
+    - _133_ ( _512_ A2 ) ( _511_ A2 ) ( _478_ A ) ( _337_ ZN ) + USE SIGNAL ;
+    - _134_ ( _339_ A3 ) ( _338_ ZN ) + USE SIGNAL ;
+    - _135_ ( _373_ A ) ( _348_ A1 ) ( _341_ A3 ) ( _340_ A ) ( _339_ ZN ) + USE SIGNAL ;
+    - _136_ ( _345_ A1 ) ( _340_ ZN ) + USE SIGNAL ;
+    - _137_ ( _342_ A ) ( _341_ ZN ) + USE SIGNAL ;
+    - _138_ ( _345_ A2 ) ( _343_ ZN ) + USE SIGNAL ;
+    - _139_ ( _347_ A2 ) ( _346_ A2 ) ( _345_ A3 ) ( _344_ ZN ) + USE SIGNAL ;
+    - _140_ ( _348_ A2 ) ( _346_ ZN ) + USE SIGNAL ;
+    - _141_ ( _374_ B1 ) ( _373_ B1 ) ( _348_ A3 ) ( _347_ ZN ) + USE SIGNAL ;
+    - _142_ ( _350_ A3 ) ( _349_ ZN ) + USE SIGNAL ;
+    - _143_ ( _510_ A4 ) ( _469_ A2 ) ( _468_ A2 ) ( _351_ A2 ) ( _350_ ZN ) + USE SIGNAL ;
+    - _144_ ( _358_ S ) ( _356_ B1 ) ( _352_ A3 ) ( _351_ ZN ) + USE SIGNAL ;
+    - _145_ ( _423_ B ) ( _357_ A1 ) ( _352_ ZN ) + USE SIGNAL ;
+    - _146_ ( _470_ A2 ) ( _354_ A2 ) ( _353_ ZN ) + USE SIGNAL ;
+    - _147_ ( _427_ A1 ) ( _424_ A1 ) ( _369_ A1 ) ( _357_ A2 ) ( _354_ ZN ) + USE SIGNAL ;
+    - _148_ ( _519_ S ) ( _515_ S ) ( _514_ S ) ( _483_ A ) ( _428_ S ) ( _377_ S ) ( _372_ S )
+      ( _371_ S ) ( _370_ S ) ( _362_ A ) ( _359_ A1 ) ( _355_ ZN ) + USE SIGNAL ;
+    - _149_ ( _357_ A3 ) ( _356_ ZN ) + USE SIGNAL ;
+    - _150_ ( _359_ A2 ) ( _358_ Z ) + USE SIGNAL ;
+    - _151_ ( _361_ S ) ( _360_ ZN ) + USE SIGNAL ;
+    - _152_ ( _363_ A ) ( _362_ ZN ) + USE SIGNAL ;
+    - _153_ ( _505_ A3 ) ( _503_ A3 ) ( _497_ A3 ) ( _365_ A2 ) ( _364_ ZN ) + USE SIGNAL ;
+    - _154_ ( _366_ S ) ( _365_ ZN ) + USE SIGNAL ;
+    - _155_ ( _483_ B1 ) ( _425_ A2 ) ( _369_ A2 ) ( _367_ ZN ) + USE SIGNAL ;
+    - _156_ ( _369_ A3 ) ( _368_ ZN ) + USE SIGNAL ;
+    - _157_ ( _374_ A ) ( _373_ ZN ) + USE SIGNAL ;
+    - _158_ ( _376_ A ) ( _375_ ZN ) + USE SIGNAL ;
+    - _159_ ( _413_ A1 ) ( _410_ A2 ) ( _378_ ZN ) + USE SIGNAL ;
+    - _160_ ( _411_ A1 ) ( _408_ A2 ) ( _381_ A4 ) ( _380_ A2 ) ( _379_ ZN ) + USE SIGNAL ;
+    - _161_ ( _409_ A1 ) ( _406_ B ) ( _404_ B2 ) ( _380_ ZN ) + USE SIGNAL ;
+    - _162_ ( _405_ A1 ) ( _402_ A2 ) ( _384_ A4 ) ( _382_ A2 ) ( _381_ ZN ) + USE SIGNAL ;
+    - _163_ ( _403_ A1 ) ( _400_ A2 ) ( _383_ A2 ) ( _382_ ZN ) + USE SIGNAL ;
+    - _164_ ( _401_ A1 ) ( _398_ A2 ) ( _383_ ZN ) + USE SIGNAL ;
+    - _165_ ( _399_ A1 ) ( _396_ A2 ) ( _387_ A3 ) ( _385_ A2 ) ( _384_ ZN ) + USE SIGNAL ;
+    - _166_ ( _397_ A1 ) ( _388_ A2 ) ( _386_ A2 ) ( _385_ ZN ) + USE SIGNAL ;
+    - _167_ ( _395_ A1 ) ( _386_ ZN ) + USE SIGNAL ;
+    - _168_ ( _516_ B ) ( _387_ ZN ) + USE SIGNAL ;
+    - _169_ ( _395_ A2 ) ( _388_ ZN ) + USE SIGNAL ;
+    - _170_ ( _392_ A1 ) ( _389_ ZN ) + USE SIGNAL ;
+    - _171_ ( _392_ A2 ) ( _390_ ZN ) + USE SIGNAL ;
+    - _172_ ( _392_ A3 ) ( _391_ ZN ) + USE SIGNAL ;
+    - _173_ ( _393_ A4 ) ( _392_ ZN ) + USE SIGNAL ;
+    - _174_ ( _518_ A2 ) ( _394_ A2 ) ( _393_ ZN ) + USE SIGNAL ;
+    - _175_ ( _517_ A1 ) ( _416_ A2 ) ( _415_ A1 ) ( _413_ A2 ) ( _411_ A2 ) ( _409_ A2 ) ( _407_ A1 )
+      ( _405_ A2 ) ( _403_ A2 ) ( _401_ A2 ) ( _399_ A2 ) ( _397_ A2 ) ( _395_ A3 ) ( _394_ ZN ) + USE SIGNAL ;
+    - _176_ ( _397_ A3 ) ( _396_ ZN ) + USE SIGNAL ;
+    - _177_ ( _399_ A3 ) ( _398_ ZN ) + USE SIGNAL ;
+    - _178_ ( _401_ A3 ) ( _400_ ZN ) + USE SIGNAL ;
+    - _179_ ( _403_ A3 ) ( _402_ ZN ) + USE SIGNAL ;
+    - _180_ ( _405_ A3 ) ( _404_ ZN ) + USE SIGNAL ;
+    - _181_ ( _407_ A2 ) ( _406_ ZN ) + USE SIGNAL ;
+    - _182_ ( _409_ A3 ) ( _408_ ZN ) + USE SIGNAL ;
+    - _183_ ( _411_ A3 ) ( _410_ ZN ) + USE SIGNAL ;
+    - _184_ ( _413_ A3 ) ( _412_ ZN ) + USE SIGNAL ;
+    - _185_ ( _415_ A2 ) ( _414_ ZN ) + USE SIGNAL ;
+    - _186_ ( _419_ A2 ) ( _418_ A2 ) ( _417_ ZN ) + USE SIGNAL ;
+    - _187_ ( _476_ A2 ) ( _418_ ZN ) + USE SIGNAL ;
+    - _188_ ( _507_ A ) ( _420_ B1 ) ( _419_ ZN ) + USE SIGNAL ;
+    - _189_ ( _422_ A ) ( _420_ ZN ) + USE SIGNAL ;
+    - _190_ ( _422_ B1 ) ( _421_ ZN ) + USE SIGNAL ;
+    - _191_ ( _424_ A2 ) ( _423_ ZN ) + USE SIGNAL ;
+    - _192_ ( _484_ A1 ) ( _426_ B ) ( _425_ ZN ) + USE SIGNAL ;
+    - _193_ ( _427_ A2 ) ( _426_ ZN ) + USE SIGNAL ;
+    - _194_ ( _464_ A1 ) ( _461_ A2 ) ( _429_ ZN ) + USE SIGNAL ;
+    - _195_ ( _462_ A1 ) ( _459_ A2 ) ( _432_ A4 ) ( _431_ A2 ) ( _430_ ZN ) + USE SIGNAL ;
+    - _196_ ( _460_ A1 ) ( _457_ B ) ( _455_ B2 ) ( _431_ ZN ) + USE SIGNAL ;
+    - _197_ ( _456_ A1 ) ( _453_ A2 ) ( _435_ A4 ) ( _433_ A2 ) ( _432_ ZN ) + USE SIGNAL ;
+    - _198_ ( _454_ A1 ) ( _451_ A2 ) ( _434_ A2 ) ( _433_ ZN ) + USE SIGNAL ;
+    - _199_ ( _452_ A1 ) ( _449_ A2 ) ( _434_ ZN ) + USE SIGNAL ;
+    - _200_ ( _450_ A1 ) ( _447_ A2 ) ( _438_ A3 ) ( _436_ A2 ) ( _435_ ZN ) + USE SIGNAL ;
+    - _201_ ( _448_ A1 ) ( _439_ A2 ) ( _437_ A2 ) ( _436_ ZN ) + USE SIGNAL ;
+    - _202_ ( _446_ A1 ) ( _437_ ZN ) + USE SIGNAL ;
+    - _203_ ( _480_ B ) ( _438_ ZN ) + USE SIGNAL ;
+    - _204_ ( _446_ A2 ) ( _439_ ZN ) + USE SIGNAL ;
+    - _205_ ( _443_ A1 ) ( _440_ ZN ) + USE SIGNAL ;
+    - _206_ ( _443_ A2 ) ( _441_ ZN ) + USE SIGNAL ;
+    - _207_ ( _443_ A3 ) ( _442_ ZN ) + USE SIGNAL ;
+    - _208_ ( _444_ A4 ) ( _443_ ZN ) + USE SIGNAL ;
+    - _209_ ( _482_ A2 ) ( _445_ A2 ) ( _444_ ZN ) + USE SIGNAL ;
+    - _210_ ( _481_ A1 ) ( _467_ A2 ) ( _466_ A1 ) ( _464_ A2 ) ( _462_ A2 ) ( _460_ A2 ) ( _458_ A1 )
+      ( _456_ A2 ) ( _454_ A2 ) ( _452_ A2 ) ( _450_ A2 ) ( _448_ A2 ) ( _446_ A3 ) ( _445_ ZN ) + USE SIGNAL ;
+    - _211_ ( _448_ A3 ) ( _447_ ZN ) + USE SIGNAL ;
+    - _212_ ( _450_ A3 ) ( _449_ ZN ) + USE SIGNAL ;
+    - _213_ ( _452_ A3 ) ( _451_ ZN ) + USE SIGNAL ;
+    - _214_ ( _454_ A3 ) ( _453_ ZN ) + USE SIGNAL ;
+    - _215_ ( _456_ A3 ) ( _455_ ZN ) + USE SIGNAL ;
+    - _216_ ( _458_ A2 ) ( _457_ ZN ) + USE SIGNAL ;
+    - _217_ ( _460_ A3 ) ( _459_ ZN ) + USE SIGNAL ;
+    - _218_ ( _462_ A3 ) ( _461_ ZN ) + USE SIGNAL ;
+    - _219_ ( _464_ A3 ) ( _463_ ZN ) + USE SIGNAL ;
+    - _220_ ( _466_ A2 ) ( _465_ ZN ) + USE SIGNAL ;
+    - _221_ ( _501_ A2 ) ( _468_ ZN ) + USE SIGNAL ;
+    - _222_ ( _508_ A2 ) ( _500_ A4 ) ( _499_ A4 ) ( _472_ A2 ) ( _471_ A2 ) ( _469_ ZN ) + USE SIGNAL ;
+    - _223_ ( _472_ B1 ) ( _471_ B1 ) ( _470_ ZN ) + USE SIGNAL ;
+    - _224_ ( _473_ A ) ( _472_ ZN ) + USE SIGNAL ;
+    - _225_ ( _475_ A ) ( _474_ ZN ) + USE SIGNAL ;
+    - _226_ ( _477_ A ) ( _476_ ZN ) + USE SIGNAL ;
+    - _227_ ( _479_ A ) ( _478_ ZN ) + USE SIGNAL ;
+    - _228_ ( _481_ A2 ) ( _480_ Z ) + USE SIGNAL ;
+    - _229_ ( _484_ A2 ) ( _483_ ZN ) + USE SIGNAL ;
+    - _230_ ( _494_ C2 ) ( _485_ ZN ) + USE SIGNAL ;
+    - _231_ ( _494_ C1 ) ( _486_ ZN ) + USE SIGNAL ;
+    - _232_ ( _488_ A ) ( _487_ ZN ) + USE SIGNAL ;
+    - _233_ ( _494_ B ) ( _488_ ZN ) + USE SIGNAL ;
+    - _234_ ( _490_ A ) ( _489_ ZN ) + USE SIGNAL ;
+    - _235_ ( _493_ A ) ( _490_ ZN ) + USE SIGNAL ;
+    - _236_ ( _493_ B1 ) ( _491_ ZN ) + USE SIGNAL ;
+    - _237_ ( _493_ B2 ) ( _492_ ZN ) + USE SIGNAL ;
+    - _238_ ( _495_ C1 ) ( _493_ ZN ) + USE SIGNAL ;
+    - _239_ ( _495_ B ) ( _494_ ZN ) + USE SIGNAL ;
+    - _240_ ( _496_ A ) ( _495_ ZN ) + USE SIGNAL ;
+    - _241_ ( _498_ S ) ( _497_ ZN ) + USE SIGNAL ;
+    - _242_ ( _508_ B1 ) ( _499_ ZN ) + USE SIGNAL ;
+    - _243_ ( _501_ B1 ) ( _500_ ZN ) + USE SIGNAL ;
+    - _244_ ( _502_ A ) ( _501_ ZN ) + USE SIGNAL ;
+    - _245_ ( _504_ S ) ( _503_ ZN ) + USE SIGNAL ;
+    - _246_ ( _506_ S ) ( _505_ ZN ) + USE SIGNAL ;
+    - _247_ ( _509_ A ) ( _508_ ZN ) + USE SIGNAL ;
+    - _248_ ( _513_ A ) ( _512_ ZN ) + USE SIGNAL ;
+    - _249_ ( _517_ A2 ) ( _516_ Z ) + USE SIGNAL ;
+    - _250_ ( _570_ QN ) + USE SIGNAL ;
+    - _251_ ( _569_ QN ) + USE SIGNAL ;
+    - _252_ ( _587_ QN ) + USE SIGNAL ;
+    - _253_ ( _588_ QN ) + USE SIGNAL ;
+    - _254_ ( _589_ QN ) + USE SIGNAL ;
+    - _255_ ( _556_ QN ) + USE SIGNAL ;
+    - _256_ ( _590_ QN ) + USE SIGNAL ;
+    - _257_ ( _541_ QN ) + USE SIGNAL ;
+    - _258_ ( _532_ QN ) + USE SIGNAL ;
+    - _259_ ( _585_ QN ) + USE SIGNAL ;
+    - _260_ ( _581_ QN ) + USE SIGNAL ;
+    - _261_ ( _522_ QN ) + USE SIGNAL ;
+    - _262_ ( _524_ QN ) + USE SIGNAL ;
+    - _263_ ( _525_ QN ) + USE SIGNAL ;
+    - _264_ ( _526_ QN ) + USE SIGNAL ;
+    - _265_ ( _528_ QN ) + USE SIGNAL ;
+    - _266_ ( _530_ QN ) + USE SIGNAL ;
+    - _267_ ( _531_ QN ) + USE SIGNAL ;
+    - _268_ ( _534_ QN ) + USE SIGNAL ;
+    - _269_ ( _535_ QN ) + USE SIGNAL ;
+    - _270_ ( _536_ QN ) + USE SIGNAL ;
+    - _271_ ( _537_ QN ) + USE SIGNAL ;
+    - _272_ ( _538_ QN ) + USE SIGNAL ;
+    - _273_ ( _539_ QN ) + USE SIGNAL ;
+    - _274_ ( _540_ QN ) + USE SIGNAL ;
+    - _275_ ( _549_ QN ) + USE SIGNAL ;
+    - _276_ ( _550_ QN ) + USE SIGNAL ;
+    - _277_ ( _551_ QN ) + USE SIGNAL ;
+    - _278_ ( _552_ QN ) + USE SIGNAL ;
+    - _279_ ( _553_ QN ) + USE SIGNAL ;
+    - _280_ ( _554_ QN ) + USE SIGNAL ;
+    - _281_ ( _555_ QN ) + USE SIGNAL ;
+    - _282_ ( _559_ QN ) + USE SIGNAL ;
+    - _283_ ( _561_ QN ) + USE SIGNAL ;
+    - _284_ ( _562_ QN ) + USE SIGNAL ;
+    - _285_ ( _563_ QN ) + USE SIGNAL ;
+    - _286_ ( _565_ QN ) + USE SIGNAL ;
+    - _287_ ( _567_ QN ) + USE SIGNAL ;
+    - _288_ ( _568_ QN ) + USE SIGNAL ;
+    - _289_ ( _579_ QN ) + USE SIGNAL ;
+    - _290_ ( _580_ QN ) + USE SIGNAL ;
+    - _291_ ( _582_ QN ) + USE SIGNAL ;
+    - _292_ ( _583_ QN ) + USE SIGNAL ;
+    - _293_ ( _584_ QN ) + USE SIGNAL ;
+    - busyTx ( PIN busyTx ) ( _578_ QN ) + USE SIGNAL ;
+    - clk ( PIN clk ) ( clkbuf_0_clk A ) + USE CLOCK + NONDEFAULTRULE CTS_NDR_0 ;
+    - clknet_0_clk ( clkbuf_3_7__f_clk A ) ( clkbuf_3_6__f_clk A ) ( clkbuf_3_5__f_clk A ) ( clkbuf_3_4__f_clk A ) ( clkbuf_3_3__f_clk A ) ( clkbuf_3_2__f_clk A ) ( clkbuf_3_1__f_clk A )
+      ( clkbuf_3_0__f_clk A ) ( clkbuf_0_clk Z ) + USE CLOCK + NONDEFAULTRULE CTS_NDR_0 ;
+    - clknet_3_0__leaf_clk ( clkload0 A ) ( _557_ CK ) ( _558_ CK ) ( _559_ CK ) ( _562_ CK ) ( _575_ CK ) ( _576_ CK )
+      ( _577_ CK ) ( _583_ CK ) ( clkbuf_3_0__f_clk Z ) + USE CLOCK ;
+    - clknet_3_1__leaf_clk ( clkload1 A ) ( _560_ CK ) ( _561_ CK ) ( _563_ CK ) ( _564_ CK ) ( _565_ CK ) ( _568_ CK )
+      ( _570_ CK ) ( _574_ CK ) ( clkbuf_3_1__f_clk Z ) + USE CLOCK ;
+    - clknet_3_2__leaf_clk ( clkload2 A ) ( _551_ CK ) ( _552_ CK ) ( _555_ CK ) ( _571_ CK ) ( _572_ CK ) ( _573_ CK )
+      ( _584_ CK ) ( clkbuf_3_2__f_clk Z ) + USE CLOCK ;
+    - clknet_3_3__leaf_clk ( _549_ CK ) ( _550_ CK ) ( _553_ CK ) ( _554_ CK ) ( _556_ CK ) ( _585_ CK ) ( _586_ CK )
+      ( _587_ CK ) ( _588_ CK ) ( _589_ CK ) ( clkbuf_3_3__f_clk Z ) + USE CLOCK ;
+    - clknet_3_4__leaf_clk ( clkload3 A ) ( _520_ CK ) ( _521_ CK ) ( _522_ CK ) ( _525_ CK ) ( _526_ CK ) ( _542_ CK )
+      ( _566_ CK ) ( _567_ CK ) ( _569_ CK ) ( clkbuf_3_4__f_clk Z ) + USE CLOCK ;
+    - clknet_3_5__leaf_clk ( clkload4 A ) ( _523_ CK ) ( _524_ CK ) ( _527_ CK ) ( _528_ CK ) ( _529_ CK ) ( _530_ CK )
+      ( _531_ CK ) ( _532_ CK ) ( _544_ CK ) ( _545_ CK ) ( clkbuf_3_5__f_clk Z ) + USE CLOCK ;
+    - clknet_3_6__leaf_clk ( clkload5 A ) ( _533_ CK ) ( _536_ CK ) ( _537_ CK ) ( _540_ CK ) ( _541_ CK ) ( _578_ CK )
+      ( _579_ CK ) ( _580_ CK ) ( _582_ CK ) ( _590_ CK ) ( clkbuf_3_6__f_clk Z ) + USE CLOCK ;
+    - clknet_3_7__leaf_clk ( clkload6 A ) ( _534_ CK ) ( _535_ CK ) ( _538_ CK ) ( _539_ CK ) ( _543_ CK ) ( _546_ CK )
+      ( _547_ CK ) ( _548_ CK ) ( _581_ CK ) ( clkbuf_3_7__f_clk Z ) + USE CLOCK ;
+    - dataValidRx ( PIN dataValidRx ) ( _587_ Q ) + USE SIGNAL ;
+    - doneTx ( PIN doneTx ) ( _510_ ZN ) + USE SIGNAL ;
+    - errorRx ( PIN errorRx ) ( _588_ Q ) + USE SIGNAL ;
+    - parallelDataRx[0] ( PIN parallelDataRx[0] ) ( _549_ Q ) ( _361_ A ) + USE SIGNAL ;
+    - parallelDataRx[1] ( PIN parallelDataRx[1] ) ( _550_ Q ) ( _366_ A ) + USE SIGNAL ;
+    - parallelDataRx[2] ( PIN parallelDataRx[2] ) ( _551_ Q ) ( _504_ A ) + USE SIGNAL ;
+    - parallelDataRx[3] ( PIN parallelDataRx[3] ) ( _552_ Q ) ( _498_ A ) + USE SIGNAL ;
+    - parallelDataRx[4] ( PIN parallelDataRx[4] ) ( _553_ Q ) ( _506_ A ) + USE SIGNAL ;
+    - parallelDataRx[5] ( PIN parallelDataRx[5] ) ( _554_ Q ) ( _323_ A ) + USE SIGNAL ;
+    - parallelDataRx[6] ( PIN parallelDataRx[6] ) ( _555_ Q ) ( _325_ A ) + USE SIGNAL ;
+    - parallelDataRx[7] ( PIN parallelDataRx[7] ) ( _556_ Q ) ( _420_ A ) + USE SIGNAL ;
+    - parallelDataTx[0] ( PIN parallelDataTx[0] ) ( _514_ A ) + USE SIGNAL ;
+    - parallelDataTx[1] ( PIN parallelDataTx[1] ) ( _515_ A ) + USE SIGNAL ;
+    - parallelDataTx[2] ( PIN parallelDataTx[2] ) ( _519_ A ) + USE SIGNAL ;
+    - parallelDataTx[3] ( PIN parallelDataTx[3] ) ( _377_ A ) + USE SIGNAL ;
+    - parallelDataTx[4] ( PIN parallelDataTx[4] ) ( _372_ A ) + USE SIGNAL ;
+    - parallelDataTx[5] ( PIN parallelDataTx[5] ) ( _370_ A ) + USE SIGNAL ;
+    - parallelDataTx[6] ( PIN parallelDataTx[6] ) ( _371_ A ) + USE SIGNAL ;
+    - parallelDataTx[7] ( PIN parallelDataTx[7] ) ( _428_ A ) + USE SIGNAL ;
+    - reset ( PIN reset ) ( _445_ A1 ) ( _394_ A1 ) ( _303_ A ) + USE SIGNAL ;
+    - serialDataRx ( PIN serialDataRx ) ( _590_ D ) + USE SIGNAL ;
+    - serialDataTx ( PIN serialDataTx ) ( _496_ ZN ) + USE SIGNAL ;
+    - startTx ( PIN startTx ) ( _355_ A2 ) ( _353_ A1 ) + USE SIGNAL ;
+    - uReceiver_baud_clkCount_0_ ( _557_ Q ) ( _414_ A ) ( _412_ B1 ) ( _393_ A3 ) ( _379_ A2 ) ( _378_ A2 ) + USE SIGNAL ;
+    - uReceiver_baud_clkCount_10_ ( _567_ Q ) ( _396_ A1 ) ( _389_ A2 ) ( _387_ A1 ) ( _385_ A1 ) + USE SIGNAL ;
+    - uReceiver_baud_clkCount_11_ ( _568_ Q ) ( _391_ A1 ) ( _388_ A1 ) ( _387_ A2 ) ( _386_ A1 ) + USE SIGNAL ;
+    - uReceiver_baud_clkCount_12_ ( _569_ Q ) ( _516_ A ) ( _389_ A1 ) + USE SIGNAL ;
+    - uReceiver_baud_clkCount_1_ ( _558_ Q ) ( _414_ B ) ( _412_ B2 ) ( _379_ A4 ) ( _378_ A3 ) + USE SIGNAL ;
+    - uReceiver_baud_clkCount_2_ ( _559_ Q ) ( _412_ A ) ( _390_ A2 ) ( _379_ A1 ) ( _378_ A1 ) + USE SIGNAL ;
+    - uReceiver_baud_clkCount_3_ ( _560_ Q ) ( _410_ A1 ) ( _379_ A3 ) + USE SIGNAL ;
+    - uReceiver_baud_clkCount_4_ ( _561_ Q ) ( _408_ A1 ) ( _391_ A2 ) ( _381_ A2 ) ( _380_ A1 ) + USE SIGNAL ;
+    - uReceiver_baud_clkCount_5_ ( _562_ Q ) ( _406_ A ) ( _404_ B1 ) ( _390_ A3 ) ( _381_ A3 ) + USE SIGNAL ;
+    - uReceiver_baud_clkCount_6_ ( _563_ Q ) ( _404_ A ) ( _390_ A1 ) ( _381_ A1 ) + USE SIGNAL ;
+    - uReceiver_baud_clkCount_7_ ( _564_ Q ) ( _402_ A1 ) ( _384_ A1 ) ( _382_ A1 ) + USE SIGNAL ;
+    - uReceiver_baud_clkCount_8_ ( _565_ Q ) ( _400_ A1 ) ( _393_ A1 ) ( _384_ A2 ) ( _383_ A1 ) + USE SIGNAL ;
+    - uReceiver_baud_clkCount_9_ ( _566_ Q ) ( _398_ A1 ) ( _384_ A3 ) + USE SIGNAL ;
+    - uReceiver_baud_sampleSignal ( _570_ Q ) ( _334_ A1 ) ( _308_ A ) + USE SIGNAL ;
+    - uReceiver_count_0_ ( _571_ Q ) ( _505_ A1 ) ( _503_ A1 ) ( _421_ A1 ) ( _360_ A1 ) ( _332_ B2 ) ( _331_ A1 )
+      ( _324_ A1 ) ( _312_ A1 ) ( _294_ A ) + USE SIGNAL ;
+    - uReceiver_count_1_ ( _572_ Q ) ( _332_ A ) ( _331_ A2 ) + USE SIGNAL ;
+    - uReceiver_count_2_ ( _573_ Q ) ( _376_ B2 ) ( _375_ B2 ) + USE SIGNAL ;
+    - uReceiver_rxMeta ( _590_ Q ) ( _586_ D ) + USE SIGNAL ;
+    - uReceiver_rxPrevious ( _589_ Q ) ( _327_ A3 ) ( _326_ A2 ) + USE SIGNAL ;
+    - uReceiver_rxSync ( _589_ D ) ( _586_ Q ) ( _513_ B2 ) ( _512_ A1 ) ( _511_ A1 ) ( _506_ B ) ( _498_ B )
+      ( _477_ B2 ) ( _361_ B ) ( _322_ A1 ) + USE SIGNAL ;
+    - uReceiver_sampleCount_0_ ( _574_ Q ) ( _344_ A1 ) ( _343_ B2 ) ( _295_ A ) + USE SIGNAL ;
+    - uReceiver_sampleCount_1_ ( _575_ Q ) ( _344_ A2 ) ( _343_ A ) + USE SIGNAL ;
+    - uReceiver_sampleCount_2_ ( _576_ Q ) ( _347_ A1 ) ( _346_ A1 ) + USE SIGNAL ;
+    - uReceiver_sampleCount_3_ ( _577_ Q ) ( _301_ A ) + USE SIGNAL ;
+    - uReceiver_state_0_ ( _582_ Q ) ( _478_ B2 ) ( _327_ A2 ) + USE SIGNAL ;
+    - uReceiver_state_1_ ( _583_ Q ) ( _476_ A1 ) ( _338_ B1 ) ( _317_ A1 ) ( _316_ A1 ) + USE SIGNAL ;
+    - uReceiver_state_2_ ( _584_ Q ) ( _474_ B2 ) ( _336_ A2 ) + USE SIGNAL ;
+    - uReceiver_state_3_ ( _585_ Q ) ( _338_ B2 ) ( _337_ A1 ) ( _307_ A ) + USE SIGNAL ;
+    - uTransmitter_baud_clkCount_0_ ( _520_ Q ) ( _465_ A ) ( _463_ B1 ) ( _444_ A3 ) ( _430_ A3 ) ( _429_ A2 ) + USE SIGNAL ;
+    - uTransmitter_baud_clkCount_10_ ( _530_ Q ) ( _447_ A1 ) ( _444_ A1 ) ( _438_ A1 ) ( _436_ A1 ) + USE SIGNAL ;
+    - uTransmitter_baud_clkCount_11_ ( _531_ Q ) ( _440_ A3 ) ( _439_ A1 ) ( _438_ A2 ) ( _437_ A1 ) + USE SIGNAL ;
+    - uTransmitter_baud_clkCount_12_ ( _532_ Q ) ( _480_ A ) ( _442_ A1 ) + USE SIGNAL ;
+    - uTransmitter_baud_clkCount_1_ ( _521_ Q ) ( _465_ B ) ( _463_ B2 ) ( _430_ A4 ) ( _429_ A3 ) + USE SIGNAL ;
+    - uTransmitter_baud_clkCount_2_ ( _522_ Q ) ( _463_ A ) ( _441_ A2 ) ( _430_ A2 ) ( _429_ A1 ) + USE SIGNAL ;
+    - uTransmitter_baud_clkCount_3_ ( _523_ Q ) ( _461_ A1 ) ( _430_ A1 ) + USE SIGNAL ;
+    - uTransmitter_baud_clkCount_4_ ( _524_ Q ) ( _459_ A1 ) ( _440_ A2 ) ( _432_ A2 ) ( _431_ A1 ) + USE SIGNAL ;
+    - uTransmitter_baud_clkCount_5_ ( _525_ Q ) ( _457_ A ) ( _455_ B1 ) ( _441_ A3 ) ( _432_ A3 ) + USE SIGNAL ;
+    - uTransmitter_baud_clkCount_6_ ( _526_ Q ) ( _455_ A ) ( _441_ A1 ) ( _432_ A1 ) + USE SIGNAL ;
+    - uTransmitter_baud_clkCount_7_ ( _527_ Q ) ( _453_ A1 ) ( _435_ A3 ) ( _433_ A1 ) + USE SIGNAL ;
+    - uTransmitter_baud_clkCount_8_ ( _528_ Q ) ( _451_ A1 ) ( _440_ A1 ) ( _435_ A2 ) ( _434_ A1 ) + USE SIGNAL ;
+    - uTransmitter_baud_clkCount_9_ ( _529_ Q ) ( _449_ A1 ) ( _435_ A1 ) + USE SIGNAL ;
+    - uTransmitter_baud_sampleSignal ( _533_ Q ) ( _368_ B1 ) ( _367_ A3 ) ( _363_ B1 ) ( _362_ B1 ) ( _355_ A3 ) ( _353_ A2 )
+      ( _350_ A2 ) + USE SIGNAL ;
+    - uTransmitter_count_countTx_0_ ( _546_ Q ) ( _492_ A ) ( _489_ A ) ( _487_ A ) ( _486_ A ) ( _358_ A ) ( _356_ B2 )
+      ( _352_ A1 ) + USE SIGNAL ;
+    - uTransmitter_count_countTx_1_ ( _547_ Q ) ( _495_ C2 ) ( _494_ A ) ( _356_ A ) ( _352_ A2 ) + USE SIGNAL ;
+    - uTransmitter_count_countTx_2_ ( _548_ Q ) ( _492_ B2 ) ( _490_ B2 ) ( _489_ B2 ) ( _488_ B2 ) ( _487_ B2 ) ( _486_ B2 )
+      ( _423_ A ) ( _296_ A ) + USE SIGNAL ;
+    - uTransmitter_sampleCount_sampleCountTx_0_ ( _542_ Q ) ( _368_ B2 ) ( _367_ A1 ) ( _362_ B2 ) + USE SIGNAL ;
+    - uTransmitter_sampleCount_sampleCountTx_1_ ( _543_ Q ) ( _368_ A ) ( _367_ A2 ) + USE SIGNAL ;
+    - uTransmitter_sampleCount_sampleCountTx_2_ ( _544_ Q ) ( _483_ B2 ) ( _425_ A1 ) + USE SIGNAL ;
+    - uTransmitter_sampleCount_sampleCountTx_3_ ( _545_ Q ) ( _426_ A ) + USE SIGNAL ;
+    - uTransmitter_state_0_ ( _578_ Q ) ( _510_ A3 ) ( _472_ B2 ) ( _355_ A1 ) ( _302_ A ) + USE SIGNAL ;
+    - uTransmitter_state_1_ ( _579_ Q ) ( _510_ A1 ) ( _508_ B2 ) ( _501_ B2 ) ( _496_ B2 ) ( _495_ A ) ( _300_ A ) + USE SIGNAL ;
+    - uTransmitter_state_2_ ( _580_ Q ) ( _510_ A2 ) ( _501_ A1 ) ( _496_ B1 ) ( _472_ A1 ) + USE SIGNAL ;
+    - uTransmitter_state_3_ ( _581_ Q ) ( _508_ A1 ) ( _306_ A ) + USE SIGNAL ;
+    - uTransmitter_storage_0_ ( _534_ Q ) ( _514_ B ) ( _490_ B1 ) + USE SIGNAL ;
+    - uTransmitter_storage_1_ ( _535_ Q ) ( _515_ B ) ( _492_ B1 ) + USE SIGNAL ;
+    - uTransmitter_storage_2_ ( _536_ Q ) ( _519_ B ) ( _488_ B1 ) + USE SIGNAL ;
+    - uTransmitter_storage_3_ ( _537_ Q ) ( _486_ B1 ) ( _377_ B ) + USE SIGNAL ;
+    - uTransmitter_storage_4_ ( _538_ Q ) ( _372_ B ) ( _298_ A ) + USE SIGNAL ;
+    - uTransmitter_storage_5_ ( _539_ Q ) ( _491_ A2 ) ( _370_ B ) + USE SIGNAL ;
+    - uTransmitter_storage_6_ ( _540_ Q ) ( _371_ B ) ( _297_ A ) + USE SIGNAL ;
+    - uTransmitter_storage_7_ ( _541_ Q ) ( _485_ A2 ) ( _428_ B ) + USE SIGNAL ;
+    - zero_ ( PIN errorTx ) + USE GROUND ;
+END NETS
+END DESIGN

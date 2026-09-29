@@ -1,0 +1,472 @@
+```text
+UART RTL → GDSII FLOW (YOSYS + OPENROAD + KLAYOUT)
+
+PROJECT:
+C:\Projects\UART
+Docker path:
+/workspace/UART
+
+TOOLS:
+Yosys
+OpenROAD
+Nangate45
+KLayout
+
+==================================================
+1. START DOCKER
+==================================================
+
+WSL:
+wsl
+
+Start container if stopped:
+docker start -ai uart-openroad
+
+OR if already running:
+docker exec -it uart-openroad bash
+
+Then:
+cd /workspace/UART
+
+Load OpenROAD environment:
+source /OpenROAD-flow-scripts/env.sh
+
+Check:
+yosys -V
+openroad -version
+
+
+==================================================
+2. RTL SIMULATION
+==================================================
+
+Compile:
+iverilog -o uart_sim \
+receiver/receiver.v \
+receiver/3bitCounter.v \
+receiver/4bitCounter.v \
+receiver/baudRateGen.v \
+transmitter/transmitter.v \
+transmitter/bitCounterTx.v \
+transmitter/sampleCounterTx.v \
+simulation/uartTop.v \
+simulation/tb_uart_top.v
+
+Run:
+vvp uart_sim
+
+Expected:
+UART LOOPBACK TEST PASS
+
+
+==================================================
+3. YOSYS: RTL → TECHNOLOGY-MAPPED NETLIST
+==================================================
+
+Start:
+yosys
+
+Read RTL:
+read_verilog receiver/receiver.v receiver/3bitCounter.v receiver/4bitCounter.v receiver/baudRateGen.v transmitter/transmitter.v transmitter/bitCounterTx.v transmitter/sampleCounterTx.v simulation/uartTop.v
+
+Set top:
+hierarchy -top uart_top
+
+Synthesize without ABC:
+synth -top uart_top -flatten -noabc
+
+Map flip-flops:
+dfflibmap -liberty /OpenROAD-flow-scripts/flow/platforms/nangate45/lib/NangateOpenCellLibrary_typical.lib
+
+Optimize:
+opt
+
+Replace undefined values with zero:
+setundef -zero
+
+Map combinational logic:
+abc -liberty /OpenROAD-flow-scripts/flow/platforms/nangate45/lib/NangateOpenCellLibrary_typical.lib
+
+Split nets:
+splitnets
+
+Clean:
+opt_clean -purge
+
+Check:
+check
+
+Remove escaped names:
+rename -unescape
+
+Write mapped netlist:
+write_verilog -noattr -noexpr /workspace/UART/uart_mapped.v
+
+Exit:
+exit
+
+
+==================================================
+4. OPENROAD: LOAD DESIGN
+==================================================
+
+Start:
+openroad
+
+Read technology LEF:
+read_lef /OpenROAD-flow-scripts/flow/platforms/nangate45/lef/NangateOpenCellLibrary.tech.lef
+
+Read standard-cell LEF:
+read_lef /OpenROAD-flow-scripts/flow/platforms/nangate45/lef/NangateOpenCellLibrary.macro.lef
+
+Read mapped netlist:
+read_verilog /workspace/UART/uart_mapped.v
+
+Link:
+link_design uart_top
+
+Read timing constraints:
+read_sdc /workspace/UART/uart.sdc
+
+
+==================================================
+5. FLOORPLAN
+==================================================
+
+Create square 1:1 die:
+initialize_floorplan -utilization 70 -aspect_ratio 1 -core_space 10
+
+Meaning:
+-utilization 70   = target 70% cell utilization
+-aspect_ratio 1   = square die
+-core_space 10     = core margin
+
+
+==================================================
+6. ROUTING TRACKS
+==================================================
+
+Use official Nangate45 tracks:
+source /OpenROAD-flow-scripts/flow/platforms/nangate45/make_tracks.tcl
+
+Do not manually guess track pitch.
+
+
+==================================================
+7. I/O PINS
+==================================================
+
+Place top-level pins:
+place_pins -hor_layers metal3 -ver_layers metal2
+
+
+==================================================
+8. TIE CELLS
+==================================================
+
+For constant-zero nets:
+insert_tiecells LOGIC0_X1/Z -prefix TIE_ZERO_
+
+Nangate45 uses:
+LOGIC0_X1
+LOGIC1_X1
+
+
+==================================================
+9. PLACEMENT
+==================================================
+
+Global placement:
+global_placement
+
+Detailed placement:
+detailed_placement
+
+
+==================================================
+10. CLOCK TREE SYNTHESIS (CTS)
+==================================================
+
+Set clock wire RC:
+set_wire_rc -clock -layer metal3
+
+Run CTS:
+clock_tree_synthesis \
+-root_buf BUF_X4 \
+-buf_list {BUF_X1 BUF_X2 BUF_X4 BUF_X8 BUF_X16 BUF_X32} \
+-clk_nets clk
+
+Check CTS:
+report_cts
+
+Check clock skew:
+report_clock_skew
+
+IMPORTANT:
+Run detailed placement AGAIN after CTS:
+detailed_placement
+
+
+==================================================
+11. ROUTING
+==================================================
+
+Global routing:
+global_route
+
+Check antenna:
+check_antennas
+
+Detailed routing:
+detailed_route
+
+
+==================================================
+12. DRC
+==================================================
+
+Run DRC:
+drt::check_drc -output_file /workspace/UART/drc.rpt
+
+Exit OpenROAD if needed, then check:
+cat /workspace/UART/drc.rpt
+
+Empty report = no DRC violations reported by this check.
+
+
+==================================================
+13. SAVE FINAL OPENROAD DESIGN
+==================================================
+
+SAVE DATABASE:
+write_db /workspace/UART/uart_final.odb
+
+SAVE DEF:
+write_def /workspace/UART/uart_final.def
+
+SAVE FINAL NETLIST:
+write_verilog /workspace/UART/uart_final.v
+
+IMPORTANT:
+Always save write_db/write_def before closing OpenROAD.
+
+
+==================================================
+14. PREPARE KLAYOUT FILES
+==================================================
+
+Use a SECOND TERMINAL.
+Do NOT close the OpenROAD terminal.
+
+Copy standard-cell GDS:
+cp /OpenROAD-flow-scripts/flow/platforms/nangate45/gds/NangateOpenCellLibrary.gds /workspace/UART/
+
+Copy KLayout technology file:
+cp /OpenROAD-flow-scripts/flow/platforms/nangate45/FreePDK45.lyt /workspace/UART/
+
+Copy DEF → GDS script:
+cp /OpenROAD-flow-scripts/flow/util/def2stream.py /workspace/UART/
+
+
+==================================================
+15. DEF + STANDARD-CELL GDS → FINAL GDS
+==================================================
+
+KLayout is already available inside Docker:
+which klayout
+
+Expected:
+/usr/bin/klayout
+
+Run:
+
+/usr/bin/klayout -zz \
+-rd design_name=uart_top \
+-rd in_def=/workspace/UART/uart_final.def \
+-rd in_files="/workspace/UART/NangateOpenCellLibrary.gds" \
+-rd seal_file="" \
+-rd out_file=/workspace/UART/uart_final.gds \
+-rd tech_file=/workspace/UART/FreePDK45.lyt \
+-rd layer_map="" \
+-r /workspace/UART/def2stream.py
+
+
+==================================================
+16. VERIFY FINAL GDS
+==================================================
+
+ls -lh /workspace/UART/uart_final.gds
+
+The file appears in Windows because /workspace/UART is mounted:
+
+C:\Projects\UART\uart_final.gds
+
+
+==================================================
+17. OPEN IN KLAYOUT
+==================================================
+
+Open:
+
+C:\Projects\UART\uart_final.gds
+
+IMPORTANT:
+Open uart_final.gds
+NOT:
+NangateOpenCellLibrary.gds
+
+NangateOpenCellLibrary.gds = standard-cell library
+uart_final.gds = complete UART physical layout
+
+
+==================================================
+18. KLAYOUT VIEW
+==================================================
+
+For a cleaner view:
+- Hide layer 235/0 if the green hatch is obstructing the layout.
+- Use mouse wheel to zoom.
+- Use right-mouse drag to zoom into a selected region.
+- Use Home / Zoom to Fit to see the complete die.
+
+The die should be square because:
+-aspect_ratio 1
+
+The standard-cell rows are rectangular because they are placement rows.
+
+
+==================================================
+FINAL FLOW TO REMEMBER
+==================================================
+
+RTL
+ ↓
+RTL SIMULATION
+ ↓
+YOSYS SYNTHESIS
+ ↓
+DFFLIBMAP + ABC
+ ↓
+TECHNOLOGY-MAPPED NETLIST
+ ↓
+OPENROAD
+ ↓
+LEF + NETLIST + SDC
+ ↓
+FLOORPLAN
+ ↓
+ROUTING TRACKS
+ ↓
+I/O PIN PLACEMENT
+ ↓
+TIE CELLS
+ ↓
+GLOBAL PLACEMENT
+ ↓
+DETAILED PLACEMENT
+ ↓
+CTS
+ ↓
+DETAILED PLACEMENT AGAIN
+ ↓
+GLOBAL ROUTING
+ ↓
+DETAILED ROUTING
+ ↓
+DRC
+ ↓
+SAVE DEF / ODB / NETLIST
+ ↓
+KLAYOUT
+ ↓
+DEF + STANDARD-CELL GDS + TECH FILE
+ ↓
+FINAL GDS
+ ↓
+uart_final.gds
+
+
+==================================================
+IMPORTANT FILES
+==================================================
+
+uart_mapped.v
+= technology-mapped netlist
+
+uart.sdc
+= timing constraints
+
+uart_final.v
+= final exported Verilog
+
+uart_final.def
+= placement + routing information
+
+uart_final.odb
+= OpenROAD database/checkpoint
+
+uart_final.gds
+= final physical layout for KLayout
+
+
+==================================================
+IMPORTANT CONCEPTS
+==================================================
+
+LEF
+= physical abstract view of cells/layers/pins
+
+LIB
+= timing + power + cell characterization
+
+Verilog
+= logical circuit
+
+DEF
+= physical placement + routing description
+
+GDS
+= detailed physical geometry
+
+SDC
+= timing constraints
+
+ODB
+= OpenROAD internal physical-design database
+
+KLayout
+= used here to merge DEF routing/placement with standard-cell GDS
+  and produce the final GDSII layout
+
+
+==================================================
+CLOCK NOTE
+==================================================
+
+100 MHz system clock:
+period = 10 ns
+
+Changing:
+create_clock -period X
+
+changes the timing requirement/system clock constraint.
+
+It does NOT change UART baud rate.
+
+UART baud rate is controlled by baudRateGen.
+
+
+==================================================
+MOST IMPORTANT HABIT
+==================================================
+
+Before closing OpenROAD:
+
+write_db /workspace/UART/uart_final.odb
+write_def /workspace/UART/uart_final.def
+write_verilog /workspace/UART/uart_final.v
+
+Then use a SECOND terminal for KLayout/GDS work.
+
+This prevents losing the in-memory OpenROAD design.
+```
